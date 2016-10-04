@@ -17,8 +17,8 @@ class ExampleTableViewController : UITableViewController {
     Set this value to true if you want to see all the "firstName"
     textFields prepopulated with the name "Raul" (for testing purposes)
     */
-    let prefillTextField = false
-    let centeredTextField = false
+    let prefillTextField = true
+    let centeredTextField = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,7 @@ class ExampleTableViewController : UITableViewController {
         }
         if centeredTextField {
             textFields.forEach { $0.textAlignment = .center }
+            textFields.forEach { $0.placeholder = "placeholder" }
         }
     }
 }
